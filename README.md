@@ -11,16 +11,14 @@ This project is inspired by the [pytorch version](https://github.com/ayooshkathu
 
 ## To compile
 1. cmake3
-2. gcc 5.4 +
+2. clang++
 
 
 
 ```
 mkdir build && cd build
-cmake3 -DCMAKE_PREFIX_PATH="your libtorch path" ..
-
-# if there are multi versions of gcc, then tell cmake which one your want to use, e.g.:
-cmake3 -DCMAKE_PREFIX_PATH="your libtorch path" -DCMAKE_C_COMPILER=/usr/local/bin/gcc -DCMAKE_CXX_COMPILER=/usr/local/bin/g++ ..
+cmake ..
+make
 ```
 
 
@@ -30,7 +28,7 @@ The first thing you need to do is to get the weights file for v3:
 
 ```
 cd models
-wget https://pjreddie.com/media/files/yolov3.weights 
+wget https://pjreddie.com/media/files/yolov3.weights
 ```
 
 On Single image:
